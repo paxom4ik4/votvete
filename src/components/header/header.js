@@ -8,8 +8,6 @@ const DEFAULT_CLASSNAME = 'header';
 const LOGO_TITLE = "VOTVETE";
 const LOGO_SUBTITLE = 'Аксессуары | Стёкла | Чехлы'
 
-
-
 const Logo = () => (
   <div className={`${DEFAULT_CLASSNAME}_logo`}>
     <img src={logo} alt={'logo'} />
