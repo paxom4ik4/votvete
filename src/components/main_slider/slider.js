@@ -2,6 +2,8 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+import { Link } from "react-router-dom";
+
 import slide1 from '../../assets/slides/slide1.png';
 import slide2 from '../../assets/slides/slide2.png';
 import slide3 from '../../assets/slides/slide3.png';
@@ -18,9 +20,9 @@ const SlideText = ({textHeader, discount}) => (
         <br /> <span>{discount}</span>
       </div>
 
-      <div className={`${DEFAULT_CLASSNAME}_slide-btn`}>
+      <Link to={'/catalog'} className={`${DEFAULT_CLASSNAME}_slide-btn`}>
         {'Перейти в Каталог'}
-      </div>
+      </Link>
     </div>
 );
 
@@ -33,7 +35,7 @@ const Slider = () => {
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={7000}
+        interval={5500}
         showIndicators={false}
       >
         <div className={`${DEFAULT_CLASSNAME}_slide`}>

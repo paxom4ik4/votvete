@@ -5,13 +5,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 12px 0;
 }
 
 .top-goods_item-order-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border: 1px solid #ffffff;
   padding: 6px 18px;
   margin: 8px;
   transition: .3s;
+}
+
+.top-goods_item-order-btn img {
+  height: 16px;
+  padding: 0 4px;
 }
 
 .top-goods_item-order-btn:hover {
@@ -22,12 +32,13 @@
 }
 
 .top-goods_item-order-btn:active {
-  color: #000000;
   background-color: #cdcdcd;
   transition: .3s;
 }
 
 .top-goods h2 {
+  align-self: flex-start;
+  margin-left: 48px;
   padding: 16px;
   margin-bottom: 16px;
 }

@@ -13,17 +13,17 @@
   padding: 28px 240px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 }
 
 .slider_slide-image-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .slider_slide img {
+  width: 95% !important;
   overflow: hidden;
 }
 
@@ -68,5 +68,10 @@
   cursor: pointer;
   color: #000000;
   background-color: #ffffff;
+  transition: .3s;
+}
+
+.slider_slide-btn:active {
+  background-color: #cdcdcd;
   transition: .3s;
 }

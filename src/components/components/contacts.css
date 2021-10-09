@@ -1,0 +1,82 @@
+.contacts_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 240px;
+}
+
+.contacts {
+  height: 100%;
+  max-width: 1200px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts_contacts-block {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts_contacts-block input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(70, 70, 70);
+  height: 24px;
+  width: 70%;
+  padding: 4px 8px;
+}
+
+.contacts_contacts-block_email {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts_contacts-block_email_subscribe {
+  padding: 4px 12px;
+  border: 1px solid #000000;
+  transition: 0.35s;
+}
+
+.contacts_contacts-block_email_subscribe:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  transition: .3s;
+}
+
+.contacts_social-media {
+  width: 15%;
+}
+
+.contacts_social-media-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 32px;
+  transition: .3s;
+}
+
+.contacts_social-media-icon:hover {
+  cursor: pointer;
+  transition: .3s;
+  color: rgb(70, 70, 70);
+}
+
+.contacts_social-media-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts_social-media-icon span {
+  padding: 0 12px;
+  text-align: left;
+}

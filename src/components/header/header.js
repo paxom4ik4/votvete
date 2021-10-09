@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
+import { NavLink } from "react-router-dom";
 
 import './header.css';
 
@@ -20,8 +21,8 @@ const Logo = () => (
 
 const HeaderMenu = () => (
   <div className={`${DEFAULT_CLASSNAME}_menu`}>
-    <div className={`${DEFAULT_CLASSNAME}_menu-item active-menu-item`}>{'Главная'}</div>
-    <div className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Каталог'}</div>
+    <NavLink exact to={'/'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Главная'}</NavLink>
+    <NavLink exact to={'/catalog'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Каталог'}</NavLink>
   </div>
 )
 

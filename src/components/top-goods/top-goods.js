@@ -2,6 +2,8 @@ import React from 'react';
 
 import './top-goods.css';
 
+import shoppingCart from '../../assets/icons/shopping-cart.png';
+
 // import cases images
 import case_63 from '../../assets/cases/case63.png';
 import case_28 from '../../assets/cases/case28.png';
@@ -33,7 +35,9 @@ const TopGoodItem = ({logo, title, price}) => (
     <img src={logo} alt={'case image'} />
     <span className={`${DEFAULT_CLASSNAME}_item-title`}>{title}</span>
     <span className={`${DEFAULT_CLASSNAME}_item-price`}>{`${price} BYN`}</span>
-    <div className={`${DEFAULT_CLASSNAME}_item-order-btn`}>{'Заказать'}</div>
+    <div className={`${DEFAULT_CLASSNAME}_item-order-btn`}>
+      {'Заказать'}
+    </div>
   </div>
 )
 
