@@ -43,11 +43,15 @@ const Slider = () => {
           <SlideText textHeader={'Скидки в честь открытия'} discount={'15%'} />
         </div>
         <div className={`${DEFAULT_CLASSNAME}_slide`}>
-          <img src={slide2} alt={'slide-image'} />
+          <div className={`${DEFAULT_CLASSNAME}_slide-image-wrapper`}>
+            <img src={slide2} alt={'slide-image'} />
+          </div>
           <SlideText textHeader={'Бери больше, плати меньше'} discount={'50%'} />
         </div>
         <div className={`${DEFAULT_CLASSNAME}_slide`}>
-          <img src={slide3} alt={'slide-image'} />
+          <div className={`${DEFAULT_CLASSNAME}_slide-image-wrapper`}>
+            <img src={slide3} alt={'slide-image'} />
+          </div>
           <SlideText textHeader={'Найди промокод в инсте'} discount={'20%'} />
         </div>
       </Carousel>

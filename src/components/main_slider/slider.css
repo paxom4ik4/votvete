@@ -1,4 +1,5 @@
 .slider {
+  padding-top: 100px;
   background-color: #000000;
 }
 
@@ -12,14 +13,14 @@
   padding: 28px 240px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 100%;
 }
 
 .slider_slide-image-wrapper {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 100%;
 }
 
 .slider_slide img {
