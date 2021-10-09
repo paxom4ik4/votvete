@@ -9,7 +9,8 @@ import './App.css';
 import Header from "../header";
 import Slider from "../main_slider";
 import TopGoods from "../top-goods";
-import Contacts from "../components";
+import Contacts from "../contacts";
+import CustomMap from "../map";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path={'/'}>
             <Slider />
             <TopGoods />
+            <CustomMap />
           </Route>
           <Route exact path={'/catalog'}>
             <TopGoods />

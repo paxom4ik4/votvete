@@ -15,10 +15,12 @@ const ContactsSection = () => {
     <div className={`${DEFAULT_CLASSNAME}_contacts-block`}>
       <div>
         <span>{'Контакты: '}</span> <br />
-        <span>{'Тел: +375 (29/44/25) 758-85-85'}</span>
+        <a href="tel:+375297588585">
+          <span>{'Тел: +375 (29/44/25) 758-85-85'}</span>
+        </a>
       </div>
       <div>
-        <span>{'Подпишись на нашу рассылку, чтобы не пропустить новые акции'}</span>
+        <span>{'Подпишись на нашу рассылку, чтобы не пропустить новые'} <span style={{color: 'red'}}>{'акции'}</span></span>
         <label placeholder={'Email'} for={'user-email'} />
         <div className={`${DEFAULT_CLASSNAME}_contacts-block_email`}>
           <input id={'user-email'} placeholder={'Введите ваш адрес электронной почты'} />
@@ -33,19 +35,19 @@ const SocialNetworksSection = () => {
   return (
     <div className={`${DEFAULT_CLASSNAME}_social-media`}>
       <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={instagram} alt={'social-icon'} /> <span>{'Instagram'}</span>
+        <img src={instagram} alt={'social-icon'} />
       </div>
       <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={facebook} alt={'social-icon'} /> <span>{'Facebook'}</span>
+        <img src={facebook} alt={'social-icon'} />
       </div>
       <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={tiktok} alt={'social-icon'} /> <span>{'Tik Tok'}</span>
+        <img src={tiktok} alt={'social-icon'} />
       </div>
       <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={vk} alt={'social-icon'} /> <span>{'Вконтакте'}</span>
+        <img src={vk} alt={'social-icon'} />
       </div>
       <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={whatsApp} alt={'social-icon'} /> <span>{'Whats App'}</span>
+        <img src={whatsApp} alt={'social-icon'} />
       </div>
     </div>
   )
