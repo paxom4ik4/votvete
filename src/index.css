@@ -1,21 +1,8 @@
-@font-face {
-  font-family: 'Lato';
-  src: url("fonts/Lato-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url("fonts/Lato-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;400;700&display=swap');
 
 * {
   user-select: none;
-  font-family: sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
