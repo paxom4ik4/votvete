@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,19 +9,13 @@ import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import './App.css';
 
 import Header from "../header";
-import Slider from "../main_slider";
-import TopGoods from "../top-goods";
 import Contacts from "../contacts";
-import CustomMap from "../map";
-import Advantages from "../advantages";
-import About from "../about/about";
-import Delivery from "../delivery/delivery";
-import Catalog from "../catalog";
 
 import case_63 from "../../assets/cases/case63.png";
 import case_28 from "../../assets/cases/case28.png";
 import case_9 from "../../assets/cases/case9.png";
 import ScrollToTop from "../../scrollToTop";
+import TransitionSwitch from "../../transitionSwitch";
 
 const items = [
   {
@@ -80,7 +72,7 @@ const items = [
     title: 'Silicone case for 12/12 Pro',
     price: '25,00'
   },
-]
+];
 
 const App = () => {
   return (
@@ -88,19 +80,7 @@ const App = () => {
       <div className={'main'}>
         <Header />
         <ScrollToTop />
-        <Switch>
-          <Route exact path={'/'}>
-            <Slider />
-            <Advantages />
-            <TopGoods />
-            <About />
-            <Delivery />
-            <CustomMap />
-          </Route>
-          <Route exact path={'/catalog'}>
-            <Catalog items={items} />
-          </Route>
-        </Switch>
+        <TransitionSwitch items={items} />
         <Contacts />
         <div className={'telegram-link'}>
           <FontAwesomeIcon icon={faTelegram} />
