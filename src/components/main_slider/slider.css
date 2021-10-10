@@ -1,5 +1,5 @@
 .slider {
-  padding-top: 100px;
+  padding-top: 120px;
   background-color: #000000;
 }
 
@@ -46,9 +46,9 @@
 }
 
 .slider_slide-text-discount-title {
-  font-size: 16px;
+  font-size: 20px;
   color: rgb(70, 70, 70);
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
 }
 

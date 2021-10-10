@@ -1,13 +1,13 @@
 import React from 'react';
-
 import './top-goods.css';
 
-import shoppingCart from '../../assets/icons/shopping-cart.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import cases images
 import case_63 from '../../assets/cases/case63.png';
 import case_28 from '../../assets/cases/case28.png';
 import case_9 from '../../assets/cases/case9.png';
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const DEFAULT_CLASSNAME = 'top-goods';
 const TITLE = 'Популярные товары';
@@ -30,13 +30,15 @@ const mockedGoods = [
   },
 ]
 
+const shoppingCart = <FontAwesomeIcon icon={faCartPlus}/>;
+
 const TopGoodItem = ({logo, title, price}) => (
   <div className={`${DEFAULT_CLASSNAME}_item-content`}>
     <img src={logo} alt={'case image'} />
     <span className={`${DEFAULT_CLASSNAME}_item-title`}>{title}</span>
     <span className={`${DEFAULT_CLASSNAME}_item-price`}>{`${price} BYN`}</span>
     <div className={`${DEFAULT_CLASSNAME}_item-order-btn`}>
-      {'Заказать'}
+      {shoppingCart} <span>{'Заказать'}</span>
     </div>
   </div>
 )

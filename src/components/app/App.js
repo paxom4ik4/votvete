@@ -5,6 +5,9 @@ import {
   Route,
 } from "react-router-dom";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+
 import './App.css';
 import Header from "../header";
 import Slider from "../main_slider";
@@ -28,6 +31,10 @@ const App = () => {
           </Route>
         </Switch>
         <Contacts />
+        <div className={'telegram-link'}>
+          <FontAwesomeIcon icon={faTelegram} />
+        </div>
+        <div className={'telegram-link-pulse'} />
       </div>
     </Router>
   )

@@ -75,15 +75,24 @@
   transition: .3s;
 }
 
-.contacts_social-media-icon:hover {
-  cursor: pointer;
-  transition: .3s;
-  color: rgb(70, 70, 70);
-}
-
-.contacts_social-media-icon img {
+.contacts_social-media-icon {
   width: 24px;
   height: 24px;
+}
+
+.contacts_social-media-icon svg {
+  font-size: 20px;
+  transition: .25s;
+}
+
+.contacts_social-media-icon svg:hover {
+  font-size: 24px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contacts_social-media-icon svg:active {
+  color: #9e9e9e;
 }
 
 .contacts_social-media-icon span {

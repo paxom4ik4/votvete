@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 
-import './contacts.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVk, faFacebook, faInstagram, faTiktok, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
-import instagram from '../../assets/icons/instagram.png';
-import facebook from '../../assets/icons/facebook.png';
-import tiktok from '../../assets/icons/tiktok.png';
-import vk from '../../assets/icons/vk.png';
-import whatsApp from '../../assets/icons/whatsApp.png';
+import './contacts.css';
 
 const DEFAULT_CLASSNAME = 'contacts';
 
 const ContactsSection = () => {
+  const [email, setEmail] = useState('');
+
   return (
     <div className={`${DEFAULT_CLASSNAME}_contacts-block`}>
       <div>
@@ -23,7 +22,7 @@ const ContactsSection = () => {
         <span>{'Подпишись на нашу рассылку, чтобы не пропустить новые'} <span style={{color: 'red'}}>{'акции'}</span></span>
         <label placeholder={'Email'} for={'user-email'} />
         <div className={`${DEFAULT_CLASSNAME}_contacts-block_email`}>
-          <input id={'user-email'} placeholder={'Введите ваш адрес электронной почты'} />
+          <input value={email} onInput={(event) => setEmail(event.currentTarget.value)} id={'user-email'} placeholder={'Введите ваш адрес электронной почты'} />
           <div className={`${DEFAULT_CLASSNAME}_contacts-block_email_subscribe`}>{'Подписаться'}</div>
         </div>
       </div>
@@ -32,23 +31,21 @@ const ContactsSection = () => {
 }
 
 const SocialNetworksSection = () => {
+  const vkIcon = <FontAwesomeIcon icon={faVk} />
+  const facebookIcon = <FontAwesomeIcon icon={faFacebook} />
+  const tikTokIcon = <FontAwesomeIcon icon={faTiktok} />
+  const instagramIcon = <FontAwesomeIcon icon={faInstagram} />
+  const whatsAppIcon = <FontAwesomeIcon icon={faWhatsapp} />
+
+  const icons = [vkIcon, facebookIcon, tikTokIcon, instagramIcon, whatsAppIcon];
+
   return (
     <div className={`${DEFAULT_CLASSNAME}_social-media`}>
-      <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={instagram} alt={'social-icon'} />
-      </div>
-      <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={facebook} alt={'social-icon'} />
-      </div>
-      <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={tiktok} alt={'social-icon'} />
-      </div>
-      <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={vk} alt={'social-icon'} />
-      </div>
-      <div className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-        <img src={whatsApp} alt={'social-icon'} />
-      </div>
+      {icons.map((item, id) => (
+        <div key={id} className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
+          {item}
+        </div>
+      ))}
     </div>
   )
 }
