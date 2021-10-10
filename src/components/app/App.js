@@ -14,6 +14,9 @@ import Slider from "../main_slider";
 import TopGoods from "../top-goods";
 import Contacts from "../contacts";
 import CustomMap from "../map";
+import Advantages from "../advantages";
+import About from "../about/about";
+import Delivery from "../delivery/delivery";
 
 const App = () => {
   return (
@@ -23,7 +26,10 @@ const App = () => {
         <Switch>
           <Route exact path={'/'}>
             <Slider />
+            <Advantages />
             <TopGoods />
+            <About />
+            <Delivery />
             <CustomMap />
           </Route>
           <Route exact path={'/catalog'}>

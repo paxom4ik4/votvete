@@ -11,10 +11,10 @@ const CustomMap = () => {
     <div className={DEFAULT_CLASSNAME}>
       <div className={`${DEFAULT_CLASSNAME}_title`}>
         <span>{'Приезжайте к нам!'}</span> <br />
-        <span>{'Мы находимся в минске: ТЦ "Замок", проспект Победителей 65 - 1 этаж'}</span>
+        <span>{'Мы находимся в минске: ул. Притыцкого, 156 - ТЦ "Green City"'}</span>
       </div>
       <YMaps>
-        <Map width={'100%'} height={'480px'} defaultState={{ center: [53.926373, 27.517196], zoom: 15 }}>
+        <Map width={'100%'} height={'480px'} defaultState={{ center: [53.908678, 27.433499], zoom: 16 }}>
           <FullscreenControl />
           <GeolocationControl options={{ float: 'left' }} />
           <ZoomControl options={{ float: 'right' }} />

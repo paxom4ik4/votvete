@@ -19,6 +19,9 @@ const ContactsSection = () => {
         </a>
       </div>
       <div>
+        <span>{'ВРЕМЯ РАБОТЫ:  ПОНЕДЕЛЬНИК-ВОСКРЕСЕНЬЕ С 10:00 ДО 23:00'}</span>
+      </div>
+      <div>
         <span>{'Подпишись на нашу рассылку, чтобы не пропустить новые'} <span style={{color: 'red'}}>{'акции'}</span></span>
         <label placeholder={'Email'} for={'user-email'} />
         <div className={`${DEFAULT_CLASSNAME}_contacts-block_email`}>
@@ -40,12 +43,15 @@ const SocialNetworksSection = () => {
   const icons = [vkIcon, facebookIcon, tikTokIcon, instagramIcon, whatsAppIcon];
 
   return (
-    <div className={`${DEFAULT_CLASSNAME}_social-media`}>
-      {icons.map((item, id) => (
-        <div key={id} className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-          {item}
-        </div>
-      ))}
+    <div className={`${DEFAULT_CLASSNAME}_social-media_content`}>
+      <span>{'Подписывайся на наши соц. сети и будь в курсе новых акции'}</span>
+      <div className={`${DEFAULT_CLASSNAME}_social-media`}>
+        {icons.map((item, id) => (
+          <div key={id} className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
