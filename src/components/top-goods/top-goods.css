@@ -37,11 +37,10 @@
   cursor: pointer;
   color: #000000;
   background-color: #ffffff;
-  transition: .3s;
 }
 
 .top-goods_item-order-btn:active {
-  background-color: #cdcdcd;
+  background-color: #959595;
   transition: .3s;
 }
 

@@ -24,6 +24,7 @@ import case_63 from "../../assets/cases/case63.png";
 import case_28 from "../../assets/cases/case28.png";
 import case_9 from "../../assets/cases/case9.png";
 import ScrollToTop from "../../scrollToTop";
+import BuyModal from "../buy_modal";
 
 const items = [
   {
@@ -92,6 +93,8 @@ const items = [
 ]
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const [search, setSearch] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [itemsToShow, setItemsToShow] = useState(items);
@@ -150,9 +153,11 @@ const App = () => {
               setSearch={setSearch}
               selectedFilter={selectedFilter}
               setSelectedFilter={setSelectedFilter}
+              setShowModal={setShowModal}
             />
           </Route>
         </Switch>
+        {showModal && <BuyModal setShowModal={setShowModal} />}
         <Contacts />
         <div className={'telegram-link'}>
           <FontAwesomeIcon icon={faTelegram} />

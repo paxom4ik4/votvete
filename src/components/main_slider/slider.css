@@ -1,3 +1,12 @@
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .slider {
   padding-top: 120px;
   background-color: #000000;
@@ -15,6 +24,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
+  animation: opacityAnimation 0.5s ease-in-out;
 }
 
 .slider_slide-image-wrapper {

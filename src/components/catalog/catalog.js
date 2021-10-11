@@ -9,18 +9,18 @@ const DEFAULT_CLASSNAME = 'catalog';
 
 const shoppingCart = <FontAwesomeIcon icon={faCartPlus}/>;
 
-const CatalogItem = ({logo, title, price}) => (
+const CatalogItem = ({logo, title, price, setShowModal}) => (
   <div className={'top-goods_item-content'}>
     <img src={logo} alt={'case image'} />
     <span className={`top-goods_item-title`}>{title}</span>
     <span className={`top-goods_item-price`}>{`${price} BYN`}</span>
     <div className={`top-goods_item-order-btn`}>
-      {shoppingCart} <span>{'Заказать'}</span>
+      {shoppingCart} <span onClick={() => setShowModal(true)}>{'Заказать'}</span>
     </div>
   </div>
 )
 
-const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter}) => {
+const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, setShowModal}) => {
   return (
     <div className={DEFAULT_CLASSNAME}>
       <div className={`${DEFAULT_CLASSNAME}_title`}>
@@ -52,7 +52,7 @@ const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter}) 
         </div>
         <div className={`${DEFAULT_CLASSNAME}_content`}>
           {items.length ? items.map((item, id) => {
-            return <CatalogItem logo={item.logo} title={item.title} price={item.price} key={id.toString()} />
+            return <CatalogItem logo={item.logo} title={item.title} price={item.price} key={id.toString()} setShowModal={setShowModal} />
           }): <span className={'catalog-no-results'}>{'Нет товаров соотвутствующих поиску / фильтрам'}</span>}
         </div>
       </div>
