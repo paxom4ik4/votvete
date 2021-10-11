@@ -44,7 +44,7 @@ const SocialNetworksSection = () => {
 
   return (
     <div className={`${DEFAULT_CLASSNAME}_social-media_content`}>
-      <span>{'Подписывайся на наши соц. сети и будь в курсе новых акции'}</span>
+      <span>{'Подписывайся на наши соц. сети и узнавай первым о наших предложениях'}</span>
       <div className={`${DEFAULT_CLASSNAME}_social-media`}>
         {icons.map((item, id) => (
           <div key={id} className={`${DEFAULT_CLASSNAME}_social-media-icon`}>

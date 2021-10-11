@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,59 +30,97 @@ const items = [
     id: 63,
     logo: case_63,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'SiliconIphone',
   },
   {
     id: 28,
     logo: case_28,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'O-like',
   },
   {
     id: 9,
     logo: case_9,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'CrystalCase',
   },
   {
     id: 64,
     logo: case_63,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'ClearCase'
   },
   {
     id: 29,
     logo: case_28,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'ClearCase'
   },
   {
     id: 10,
     logo: case_9,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'O-like',
   },
   {
     id: 42,
     logo: case_63,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'SiliconIphone',
   },
   {
     id: 43,
     logo: case_28,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'SiliconIphone',
   },
   {
     id: 44,
     logo: case_9,
     title: 'Silicone case for 12/12 Pro',
-    price: '25,00'
+    price: '25,00',
+    type: 'CrystalCase',
   },
 ]
 
 const App = () => {
+  const [search, setSearch] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [itemsToShow, setItemsToShow] = useState(items);
+
+  useEffect(() => {
+    if(search === '' && selectedFilter === 'all') {
+      setItemsToShow(items);
+    } else if (search && selectedFilter === 'all') {
+      const searchItems = items.filter((item) => {
+        return item.title.toLowerCase().includes(search.toLowerCase());
+      });
+      setItemsToShow(searchItems);
+    } else if (selectedFilter !== 'all' && search === '') {
+      const filteredItems = items.filter((item) => {
+        return item.type === selectedFilter;
+      });
+      setItemsToShow(filteredItems);
+    } else {
+      const searchItems = items.filter((item) => {
+        return item.title.toLowerCase().includes(search.toLowerCase());
+      });
+
+      const filteredItems = items.filter((item) => {
+        return item.type === selectedFilter;
+      });
+      setItemsToShow(filteredItems.length > searchItems.length ? searchItems : filteredItems);
+    }
+  }, [search, selectedFilter])
+
   return (
     <Router>
       <div className={'main'}>
@@ -98,7 +136,13 @@ const App = () => {
             <CustomMap />
           </Route>
           <Route exact path={'/catalog'}>
-            <Catalog items={items} />
+            <Catalog
+              items={itemsToShow}
+              search={search}
+              setSearch={setSearch}
+              selectedFilter={selectedFilter}
+              setSelectedFilter={setSelectedFilter}
+            />
           </Route>
         </Switch>
         <Contacts />

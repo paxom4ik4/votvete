@@ -35,7 +35,7 @@ const Slider = () => {
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={4000}
+        interval={3500}
         showIndicators={false}
       >
         <div className={`${DEFAULT_CLASSNAME}_slide`}>
