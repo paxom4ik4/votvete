@@ -80,6 +80,7 @@
 
 .catalog_search-panel_filter ul li {
   padding: 8px;
+  transition: .25s;
 }
 
 .catalog_search-panel_filter ul li:hover {
@@ -91,6 +92,7 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.5px;
+  transition: .25s;
 }
 
 .catalog-no-results {

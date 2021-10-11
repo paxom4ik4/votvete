@@ -29,42 +29,42 @@ const items = [
   {
     id: 63,
     logo: case_63,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'Silicone Case',
     price: '25,00',
     type: 'SiliconIphone',
   },
   {
     id: 28,
     logo: case_28,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'O-like case for 12/12 Pro',
     price: '25,00',
     type: 'O-like',
   },
   {
     id: 9,
     logo: case_9,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'Crystal Case',
     price: '25,00',
     type: 'CrystalCase',
   },
   {
     id: 64,
     logo: case_63,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'Clear Case',
     price: '25,00',
     type: 'ClearCase'
   },
   {
     id: 29,
     logo: case_28,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'ClearCase case for 12/12 Pro',
     price: '25,00',
     type: 'ClearCase'
   },
   {
     id: 10,
     logo: case_9,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'O like case',
     price: '25,00',
     type: 'O-like',
   },
@@ -78,14 +78,14 @@ const items = [
   {
     id: 43,
     logo: case_28,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'SiliconIphone',
     price: '25,00',
     type: 'SiliconIphone',
   },
   {
     id: 44,
     logo: case_9,
-    title: 'Silicone case for 12/12 Pro',
+    title: 'CrystalCase',
     price: '25,00',
     type: 'CrystalCase',
   },
@@ -97,28 +97,36 @@ const App = () => {
   const [itemsToShow, setItemsToShow] = useState(items);
 
   useEffect(() => {
-    if(search === '' && selectedFilter === 'all') {
+    if(search.trim() === '' && selectedFilter === 'all') {
       setItemsToShow(items);
-    } else if (search && selectedFilter === 'all') {
+      return;
+    }
+
+    if (search.trim() !== '' && selectedFilter === 'all') {
       const searchItems = items.filter((item) => {
-        return item.title.toLowerCase().includes(search.toLowerCase());
+        return item.title.toLowerCase().includes(search.trim().toLowerCase());
       });
       setItemsToShow(searchItems);
-    } else if (selectedFilter !== 'all' && search === '') {
+      return;
+    }
+
+    if (selectedFilter !== 'all' && search.trim() === '') {
       const filteredItems = items.filter((item) => {
         return item.type === selectedFilter;
       });
       setItemsToShow(filteredItems);
-    } else {
-      const searchItems = items.filter((item) => {
-        return item.title.toLowerCase().includes(search.toLowerCase());
-      });
-
-      const filteredItems = items.filter((item) => {
-        return item.type === selectedFilter;
-      });
-      setItemsToShow(filteredItems.length > searchItems.length ? searchItems : filteredItems);
+      return;
     }
+
+    const filteredItems = items.filter((item) => {
+      return item.type === selectedFilter;
+    });
+
+    const searchItems = filteredItems.filter((item) => {
+      return item.title.toLowerCase().includes(search.trim().toLowerCase());
+    });
+
+    setItemsToShow(searchItems);
   }, [search, selectedFilter])
 
   return (
