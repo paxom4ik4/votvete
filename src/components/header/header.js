@@ -6,7 +6,7 @@ import './header.css';
 
 const DEFAULT_CLASSNAME = 'header';
 
-const LOGO_TITLE = "VOTVETE";
+const LOGO_TITLE = "VOTVETE.CASE";
 const LOGO_SUBTITLE = 'Аксессуары | Стёкла | Чехлы'
 
 const Logo = () => (
@@ -19,18 +19,26 @@ const Logo = () => (
   </div>
 )
 
-const HeaderMenu = () => (
-  <div className={`${DEFAULT_CLASSNAME}_menu`}>
-    <NavLink exact to={'/'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Главная'}</NavLink>
-    <NavLink exact to={'/catalog'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Каталог'}</NavLink>
-  </div>
-)
-
-const Header = () => {
+const Header = ({pathname, setPathname}) => {
   return (
     <div className={DEFAULT_CLASSNAME}>
       <Logo />
-      <HeaderMenu />
+      {!pathname.includes('catalog') && (
+        <div className={`${DEFAULT_CLASSNAME}_main-links`}>
+          <a href={'#slider'}>{'Промо'}</a>
+          <a href={'#top-goods'}>{'Популярные товары'}</a>
+          <a href={'#about'}>{'О Магазине'}</a>
+          <a href={'#recommendation'}>{'Рекоммендуем'}</a>
+          <a href={'#delivery'}>{'Доставка и Возврат'}</a>
+          <a href={'#sales'}>{'Акции'}</a>
+          <a href={'#custom-map'}>{'Где мы находимся'}</a>
+          <a href={'#contacts'}>{'Контакты'}</a>
+        </div>
+      )}
+      <div className={`${DEFAULT_CLASSNAME}_menu`}>
+        <NavLink onClick={() => setPathname()} exact to={'/'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Главная'}</NavLink>
+        <NavLink onClick={() => setPathname()} exact to={'/catalog'} activeClassName={'active-menu-item'} className={`${DEFAULT_CLASSNAME}_menu-item`}>{'Каталог'}</NavLink>
+      </div>
     </div>
   )
 };

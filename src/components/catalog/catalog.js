@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './catalog.css';
 
@@ -21,6 +21,10 @@ const CatalogItem = ({logo, title, price, setShowModal}) => (
 )
 
 const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, setShowModal}) => {
+  useEffect(() => {
+
+  }, [])
+
   return (
     <div className={DEFAULT_CLASSNAME}>
       <div className={`${DEFAULT_CLASSNAME}_title`}>

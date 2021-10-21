@@ -13,6 +13,7 @@ const ABOUT_SHOP_TEXT_2 = '  Также следите за нашим сайт�
 const About = () => {
   return (
     <div className={DEFAULT_CLASSNAME}>
+      <span id={DEFAULT_CLASSNAME} />
       <div className={`${DEFAULT_CLASSNAME}_content`}>
         <div className={`${DEFAULT_CLASSNAME}_title`}>{'О магазине'}</div>
         <div className={`${DEFAULT_CLASSNAME}_text`}>{ABOUT_SHOP_TEXT}</div>

@@ -1,6 +1,6 @@
 .advantages {
   padding: 12px 0;
-  background-color: #000000;
+  background-color: rgb(30, 30, 30);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -25,12 +25,29 @@
 .advantages_item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 192px;
+  height: 128px;
+  transition: .25s;
+  border-radius: 10px;
   font-size: 48px;
+}
+
+.advantages_item:hover {
+  cursor: pointer;
+  transition: .3s;
+  padding-bottom: 5px;
+  box-shadow: 0 1px 20px 3px rgb(27, 27, 27);
 }
 
 .advantages_item span {
   padding-top: 16px;
   font-size: 16px;
+  font-weight: 100;
+}
+
+.advantages_item svg {
+  stroke: black;
+  font-size: 48px;
 }

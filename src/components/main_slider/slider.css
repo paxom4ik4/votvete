@@ -9,7 +9,13 @@
 
 .slider {
   padding-top: 120px;
-  background-color: #000000;
+  background-color: rgb(30, 30, 30);
+  position: relative;
+}
+
+#slider {
+  position: absolute;
+  top: -90px;
 }
 
 .slider .control-dots {
@@ -50,14 +56,14 @@
   width: 280px;
   text-align: center;
   font-size: 36px;
-  color: rgb(70, 70, 70);
+  color: rgb(140, 140, 140);
   font-weight: 100;
   text-transform: uppercase;
 }
 
 .slider_slide-text-discount-title {
   font-size: 20px;
-  color: rgb(70, 70, 70);
+  color: rgb(140, 140, 140);
   font-weight: 300;
   text-transform: uppercase;
 }

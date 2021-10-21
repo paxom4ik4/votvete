@@ -8,10 +8,10 @@ import { faShippingFast, faStar, faShoppingBag, faTags } from "@fortawesome/free
 const DEFAULT_CLASSNAME = 'advantages';
 
 const Advantages = () => {
-  const deliveryIcon = <FontAwesomeIcon icon={faShippingFast} />
-  const qualityIcon = <FontAwesomeIcon icon={faStar} />
-  const shoppingIcon = <FontAwesomeIcon icon={faShoppingBag} />
-  const discountSystemIcon = <FontAwesomeIcon icon={faTags} />
+  const deliveryIcon = <FontAwesomeIcon className={'font-awesome-icon'} icon={faShippingFast} />
+  const qualityIcon = <FontAwesomeIcon className={'font-awesome-icon'} icon={faStar} />
+  const shoppingIcon = <FontAwesomeIcon className={'font-awesome-icon'} icon={faShoppingBag} />
+  const discountSystemIcon = <FontAwesomeIcon className={'font-awesome-icon'} icon={faTags} />
 
   const advantageItems = [
     {

@@ -40,7 +40,13 @@ const SocialNetworksSection = () => {
   const instagramIcon = <FontAwesomeIcon icon={faInstagram} />
   const whatsAppIcon = <FontAwesomeIcon icon={faWhatsapp} />
 
-  const icons = [vkIcon, facebookIcon, tikTokIcon, instagramIcon, whatsAppIcon];
+  const icons = [
+    { icon: vkIcon, link: 'https://vk.com/votveteby'},
+    { icon: facebookIcon, link: 'https://www.facebook.com/votvete.by/'},
+    { icon: tikTokIcon, link: 'https://www.tiktok.com/@votvete.by'},
+    { icon: instagramIcon, link: 'https://www.instagram.com/votvet.by/'},
+    { icon: whatsAppIcon, link: 'https://api.whatsapp.com/message/3XUUXMSZ4U6TO1'}
+  ];
 
   return (
     <div className={`${DEFAULT_CLASSNAME}_social-media_content`}>
@@ -48,7 +54,7 @@ const SocialNetworksSection = () => {
       <div className={`${DEFAULT_CLASSNAME}_social-media`}>
         {icons.map((item, id) => (
           <div key={id} className={`${DEFAULT_CLASSNAME}_social-media-icon`}>
-            {item}
+            <a target={'_blank'} href={item.link}>{item.icon}</a>
           </div>
         ))}
       </div>
@@ -58,7 +64,7 @@ const SocialNetworksSection = () => {
 
 const Contacts = () => {
   return (
-    <div className={`${DEFAULT_CLASSNAME}_wrapper`}>
+    <div id={DEFAULT_CLASSNAME} className={`${DEFAULT_CLASSNAME}_wrapper`}>
       <div className={DEFAULT_CLASSNAME}>
         <ContactsSection />
         <SocialNetworksSection />

@@ -1,11 +1,17 @@
 .top-goods {
+  position: relative;
   color: #ffffff;
-  background-color: #000000;
+  background-color: rgb(30, 30, 30);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 12px 0;
+}
+
+#top-goods {
+  position: absolute;
+  top: -90px;
 }
 
 .top-goods_item-order-btn {

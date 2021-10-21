@@ -25,6 +25,8 @@ import case_28 from "../../assets/cases/case28.png";
 import case_9 from "../../assets/cases/case9.png";
 import ScrollToTop from "../../scrollToTop";
 import BuyModal from "../buy_modal";
+import Recommendation from "../recommendation";
+import Sales from "../sales";
 
 const items = [
   {
@@ -99,6 +101,14 @@ const App = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [itemsToShow, setItemsToShow] = useState(items);
 
+  const [pathname, setPathname] = useState("");
+
+  const onSetPathname = () => {
+    setTimeout(() => {
+      setPathname(window.location.pathname);
+    })
+  }
+
   useEffect(() => {
     if(search.trim() === '' && selectedFilter === 'all') {
       setItemsToShow(items);
@@ -135,15 +145,17 @@ const App = () => {
   return (
     <Router>
       <div className={'main'}>
-        <Header />
+        <Header pathname={pathname} setPathname={onSetPathname} />
         <ScrollToTop />
         <Switch>
           <Route exact path={'/'}>
-            <Slider />
+            <Slider setPathname={onSetPathname} />
             <Advantages />
             <TopGoods />
             <About />
+            <Recommendation />
             <Delivery />
+            <Sales />
             <CustomMap />
           </Route>
           <Route exact path={'/catalog'}>

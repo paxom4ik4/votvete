@@ -12,7 +12,7 @@ import './slider.css';
 
 const DEFAULT_CLASSNAME = 'slider';
 
-const SlideText = ({textHeader, discount}) => (
+const SlideText = ({textHeader, discount, setPathname}) => (
     <div className={`${DEFAULT_CLASSNAME}_slide-text`}>
       <div className={`${DEFAULT_CLASSNAME}_slide-text-title`}>{textHeader}</div>
       <div className={`${DEFAULT_CLASSNAME}_slide-text-discount-title`}>
@@ -20,15 +20,16 @@ const SlideText = ({textHeader, discount}) => (
         <br /> <span>{discount}</span>
       </div>
 
-      <Link to={'/catalog'} className={`${DEFAULT_CLASSNAME}_slide-btn`}>
+      <Link to={'/catalog'} onClick={() => setPathname()} className={`${DEFAULT_CLASSNAME}_slide-btn`}>
         {'Перейти в Каталог'}
       </Link>
     </div>
 );
 
-const Slider = () => {
+const Slider = ({setPathname}) => {
   return (
     <div className={DEFAULT_CLASSNAME}>
+      <span id={DEFAULT_CLASSNAME}/>
       <Carousel
         showStatus={false}
         swipeable={true}
@@ -42,19 +43,19 @@ const Slider = () => {
           <div className={`${DEFAULT_CLASSNAME}_slide-image-wrapper`}>
             <img src={slide1} alt={'slide-image'} />
           </div>
-          <SlideText textHeader={'Скидки в честь открытия'} discount={'15%'} />
+          <SlideText textHeader={'Скидки в честь открытия'} discount={'15%'} setPathname={setPathname} />
         </div>
         <div className={`${DEFAULT_CLASSNAME}_slide`}>
           <div className={`${DEFAULT_CLASSNAME}_slide-image-wrapper`}>
             <img src={slide2} alt={'slide-image'} />
           </div>
-          <SlideText textHeader={'Бери больше, плати меньше'} discount={'50%'} />
+          <SlideText textHeader={'Бери больше, плати меньше'} discount={'50%'} setPathname={setPathname} />
         </div>
         <div className={`${DEFAULT_CLASSNAME}_slide`}>
           <div className={`${DEFAULT_CLASSNAME}_slide-image-wrapper`}>
             <img src={slide3} alt={'slide-image'} />
           </div>
-          <SlideText textHeader={'Найди промокод в инсте'} discount={'20%'} />
+          <SlideText textHeader={'Найди промокод в инсте'} discount={'20%'} setPathname={setPathname} />
         </div>
       </Carousel>
     </div>

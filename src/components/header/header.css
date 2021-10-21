@@ -7,9 +7,19 @@
   align-items: center;
   height: 90px;
   width: 100%;
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(0, 0, 0);
   color: #ffffff;
   padding: 0 40px;
+}
+
+.header_main-links a {
+  margin: 0 8px;
+}
+
+.header_main-links a:hover {
+  cursor: pointer;
+  opacity: 0.85;
+  transition: .25s;
 }
 
 .header_logo {

@@ -7,6 +7,7 @@ const DEFAULT_CLASSNAME = 'delivery';
 const Delivery = () => {
   return (
     <div className={DEFAULT_CLASSNAME}>
+      <span id={DEFAULT_CLASSNAME} />
       <div className={`${DEFAULT_CLASSNAME}_wrapper`}>
         <div className={`${DEFAULT_CLASSNAME}_title`}>
           {'Доставка и Возврат товара'}
@@ -37,7 +38,7 @@ const Delivery = () => {
               </ul>}
               {'Ряд товаров можно вернуть, если они упакованы в герметичную (вакуумную) потребительскую упаковку, а также в потребительскую упаковку, обеспечивающую возможность установить, что товар не был в употреблении.'}</span>
             <span>{'При самовывозе скидка 5 %'}</span>
-            <span>{'VOTVETE.BY – дарим сервис который раньше Вы не знали. Приятных покупок!'}</span>
+            <span>{'VOTVETE.CASE – дарим сервис который раньше Вы не знали. Приятных покупок!'}</span>
           </div>
         </div>
       </div>

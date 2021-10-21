@@ -46,6 +46,7 @@ const TopGoodItem = ({logo, title, price}) => (
 const TopGoods = () => {
   return (
     <div className={DEFAULT_CLASSNAME}>
+      <span id={DEFAULT_CLASSNAME} />
       <h2>{TITLE}</h2>
       <div className={`${DEFAULT_CLASSNAME}_container`}>
         {mockedGoods.map((item, id) => (

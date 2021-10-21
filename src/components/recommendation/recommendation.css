@@ -1,0 +1,69 @@
+.recommendation {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(30, 30, 30);
+  color: #ffffff;
+}
+
+#recommendation {
+  position: relative;
+  top: -90px;
+}
+
+.recommendation_title {
+  align-self: flex-start;
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+
+.recommendation_wrapper {
+  width: 95%;
+  padding: 0 26px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.recommendation_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommendation_item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.recommendation_item-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation_item-title {
+  font-size: 24px;
+}
+
+.recommendation_item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.recommendation_item-content ul {
+  padding-top: 24px;
+  font-size: 18px;
+}
+
+.recommendation_item-content ul li {
+  padding: 4px 0;
+}
+
+
+.recommendation_item-img {
+  width: 35%;
+}
