@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './header.css';
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 
+import { Link } from 'react-scroll';
+
 const DEFAULT_CLASSNAME = 'header';
 
 const LOGO_TITLE = "VOTVETE.CASE";
@@ -34,6 +36,12 @@ const Header = ({pathname, setPathname}) => {
     (innerWidth < 900) && setBurgerOpen(false);
   }, [])
 
+  const scrollToElement = (event, id) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    element.scrollIntoView();
+  }
+
   return (
     <>
     <div className={DEFAULT_CLASSNAME}>
@@ -47,15 +55,31 @@ const Header = ({pathname, setPathname}) => {
       </div>
     </div>
     {!pathname.includes('catalog') && (
-      <div className={burgerOpen ? `${DEFAULT_CLASSNAME}_main-links` : `${DEFAULT_CLASSNAME}_main-links-close`}>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#slider'}>{'Промо'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#top-goods'}>{'Популярные товары'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#about'}>{'О Магазине'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#recommendation'}>{'Рекоммендуем'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#delivery'}>{'Доставка и Возврат'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#sales'}>{'Акции'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#custom-map'}>{'Где мы находимся'}</a>
-        <a onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} href={'#contacts'}>{'Контакты'}</a>
+      <div className={burgerOpen ? `${DEFAULT_CLASSNAME}_main-links` : `${DEFAULT_CLASSNAME}_main-links ${DEFAULT_CLASSNAME}_main-links-close`}>
+        <Link activeClass="active" to="slider" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Промо'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="top-goods" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Популярные товары'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="about" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'О Магазине'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="recommendation" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Рекомендуем'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="delivery" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Доставка и Возврат'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="sales" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Акции'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="custom-map" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Где мы находимся'}</span>
+        </Link>
+        <Link onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)} activeClass="active" to="contacts" spy={true} smooth={true} duration={800}>
+          <span onClick={() => clientWidth < 900 && setBurgerOpen(!burgerOpen)}>{'Контакты'}</span>
+        </Link>
       </div>
     )}
     </>

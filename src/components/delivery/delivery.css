@@ -45,6 +45,7 @@
 }
 
 .delivery_content div span {
+  text-align: justify;
   padding: 8px 0;
 }
 

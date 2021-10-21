@@ -109,7 +109,7 @@
 
   @keyframes openMenu {
     0% {
-      top: 0;
+      top: -140px;
       z-index: 0;
     }
     100% {
@@ -120,7 +120,7 @@
   .header_main-links {
     top: 90px;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.96);
+    background-color: rgba(0, 0, 0, 0.98);
     left: 0;
     width: 100%;
     display: flex;
@@ -130,7 +130,7 @@
     flex-direction: row;
     text-align: center;
     position: fixed;
-    animation: openMenu 0.35s;
+    animation: openMenu 0.5s;
     transform: none;
   }
 
@@ -148,18 +148,15 @@
       top: 90px;
     }
     100% {
-      top: 0;
+      top: -140px;
     }
   }
 
   .header_main-links-close {
-    top: 0;
-    z-index: 0;
+    top: -140px;
     background-color: #000000;
-    left: 0;
-    height: 0;
     width: 100%;
-    animation: closeMenu 2s;
+    animation: closeMenu 0.7s ease-in-out;
   }
 }
 

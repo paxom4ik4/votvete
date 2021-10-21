@@ -32,7 +32,7 @@ const Slider = ({setPathname}) => {
       <span id={DEFAULT_CLASSNAME}/>
       <Carousel
         showStatus={false}
-        swipeable={true}
+        swipeable={false}
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={false}
