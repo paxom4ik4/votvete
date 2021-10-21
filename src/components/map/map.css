@@ -1,0 +1,45 @@
+.ymaps-map {
+  -ms-touch-action: auto !important;
+  touch-action: auto !important;
+}
+
+.custom-map {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(30, 30, 30);
+  color: #ffffff;
+  width: 100%;
+  height: 620px;
+}
+
+#custom-map {
+  position: absolute;
+  top: -90px;
+}
+
+.custom-map_title {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 48px;
+  padding: 16px;
+}
+
+.custom-map_title span:first-child {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 425px) {
+  .custom-map_title {
+    text-align: center;
+    margin: 0;
+  }
+
+  .custom-map_title span:last-child {
+    text-align: left;
+  }
+}
