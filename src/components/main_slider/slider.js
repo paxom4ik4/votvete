@@ -35,7 +35,7 @@ const Slider = ({setPathname}) => {
         swipeable={true}
         showThumbs={false}
         infiniteLoop={true}
-        autoPlay={true}
+        autoPlay={false}
         interval={3500}
         showIndicators={false}
       >

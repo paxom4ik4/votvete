@@ -109,3 +109,39 @@
 .catalog-no-results {
   color: #ffffff;
 }
+
+@media (max-width: 425px) {
+  .catalog_wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .catalog_search-panel {
+    width: 100%;
+  }
+
+  .catalog_search-panel input {
+    width: 100%;
+  }
+
+  .catalog_search-icon {
+    display: none;
+  }
+
+  .catalog_search-panel_filter {
+    padding-bottom: 12px;
+    text-align: center;
+  }
+
+  .catalog_search-panel_input {
+    width: 100%;
+  }
+
+  .catalog_search-panel_filter span {
+    align-self: center;
+  }
+
+  .catalog_title {
+    align-self: center;
+  }
+}

@@ -91,3 +91,25 @@
   background-color: #cdcdcd;
   transition: .3s;
 }
+
+@media (max-width: 1024px) {
+  .slider_slide {
+    padding: 20px 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_slide {
+    padding: 20px 0 !important;
+    flex-direction: column;
+  }
+  .slider_slide-text {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  .slider {
+    padding-top: 90px;
+  }
+}

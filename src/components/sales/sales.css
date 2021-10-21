@@ -57,3 +57,30 @@
   opacity: 0.8;
   transition: .3s;
 }
+
+@media (max-width: 1024px) {
+  .sales_content {
+    flex-direction: column;
+  }
+  .sales_content-item  {
+    font-size: 18px;
+    width: 50%;
+  }
+  .sales_content-item img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sales_content-item  {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  .sales_content-item img {
+    width: 280px;
+  }
+  .sales_title {
+    align-self: center;
+  }
+}

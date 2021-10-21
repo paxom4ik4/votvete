@@ -47,3 +47,24 @@
 .delivery_content div span {
   padding: 8px 0;
 }
+
+@media (max-width: 1440px) {
+  .delivery_content {
+    flex-direction: column;
+  }
+  .delivery_content div {
+    height: auto;
+  }
+  .delivery_return {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .delivery_content div {
+    width: 100%;
+  }
+  .delivery_title {
+    align-self: center;
+  }
+}

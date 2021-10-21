@@ -40,7 +40,7 @@ const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, s
               placeholder={'Введите название товара'}
             />
             <div className={`${DEFAULT_CLASSNAME}_search-panel_btn`}>
-              <FontAwesomeIcon icon={faSearch} />
+              <FontAwesomeIcon className={`${DEFAULT_CLASSNAME}_search-icon`} icon={faSearch} />
             </div>
           </div>
           <div className={`${DEFAULT_CLASSNAME}_search-panel_filter`}>
