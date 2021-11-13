@@ -45,7 +45,7 @@ const Header = ({pathname, setPathname}) => {
   return (
     <>
     <div className={DEFAULT_CLASSNAME}>
-      {!pathname.includes('catalog') && <div className={`${DEFAULT_CLASSNAME}_menu-burger`}>
+      {!pathname.includes('catalog') && <div className={burgerOpen ? `${DEFAULT_CLASSNAME}_menu-burger burger-menu-open` : `${DEFAULT_CLASSNAME}_menu-burger`}>
         <FontAwesomeIcon onClick={() => setBurgerOpen(!burgerOpen)} icon={faBars}/>
       </div>}
       <Logo />

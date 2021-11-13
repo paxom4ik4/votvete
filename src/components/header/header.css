@@ -109,7 +109,7 @@
 
   @keyframes openMenu {
     0% {
-      top: -140px;
+      top: -300px;
       z-index: 0;
     }
     100% {
@@ -136,27 +136,29 @@
 
   .header_menu-burger {
     position: absolute;
-    top: 45px;
-    transform: translateY(-50%);
+    top: 29px;
     left: 20px;
     font-size: 32px;
     display: flex;
+    transition: .5s ease-in-out;
+  }
+
+  .burger-menu-open {
+    transform: rotate(90deg);
+    transition: .3s;
   }
 
   @keyframes closeMenu {
-    0% {
-      top: 90px;
-    }
     100% {
-      top: -140px;
+      top: -300px;
     }
   }
 
   .header_main-links-close {
-    top: -140px;
+    top: -300px;
     background-color: #000000;
     width: 100%;
-    animation: closeMenu 0.7s ease-in-out;
+    animation: closeMenu 0.5s ease-in-out;
   }
 }
 
@@ -164,10 +166,11 @@
   .header_main-links {
     height: fit-content;
     flex-direction: column;
+    opacity: 0.95;
   }
   .header_main-links a {
     width: 95%;
-    padding: 4px 0;
+    padding: 16px 0;
   }
 }
 
@@ -180,7 +183,7 @@
   }
   .header {
     position: fixed;
-    padding: 4px 0;
+    padding: 4px 0 0;
     flex-direction: column;
   }
 }
