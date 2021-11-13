@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
+import { Carousel } from 'react-responsive-carousel';
+
 import './catalog.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,21 +11,42 @@ const DEFAULT_CLASSNAME = 'catalog';
 
 const shoppingCart = <FontAwesomeIcon icon={faCartPlus}/>;
 
-const CatalogItem = ({logo, title, price, setShowModal}) => (
+const CatalogItem = ({photos, title, price, setShowModal, setActiveItem}) => (
   <div className={'top-goods_item-content'}>
-    <img src={logo} alt={'case image'} />
+    {photos.length ?
+      <Carousel
+        showStatus={false}
+        swipeable={true}
+        showThumbs={false}
+        infiniteLoop={true}
+        showIndicators={false}
+      >
+        {photos.map(photo => {
+          return (
+            <div className={'slide-item'}>
+              <img src={photo}/>
+            </div>
+          )
+        })}
+      </Carousel> :
+      <div className={'top-goods_item-content-no_photo'}>{'Нет Фото'}</div>
+    }
     <span className={`top-goods_item-title`}>{title}</span>
-    <span className={`top-goods_item-price`}>{`${price} BYN`}</span>
+    <span className={`top-goods_item-price`}>{`${price}`}</span>
     <div className={`top-goods_item-order-btn`}>
-      {shoppingCart} <span onClick={() => setShowModal(true)}>{'Заказать'}</span>
+      {shoppingCart} <span onClick={() => {
+      setActiveItem({
+        title,
+        price,
+      });
+      setShowModal(true);
+    }}>{'Заказать'}</span>
     </div>
   </div>
 )
 
-const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, setShowModal}) => {
-  useEffect(() => {
-
-  }, [])
+const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, setShowModal, example, activeSubcategory, setActiveSubcategory, setActiveItem}) => {
+  console.log(example);
 
   return (
     <div className={DEFAULT_CLASSNAME}>
@@ -32,31 +55,28 @@ const Catalog = ({items, search, setSearch, selectedFilter, setSelectedFilter, s
       </div>
       <div className={`${DEFAULT_CLASSNAME}_wrapper`}>
         <div className={`${DEFAULT_CLASSNAME}_search-panel`}>
-          <div className={`${DEFAULT_CLASSNAME}_search-panel_input`}>
-            <input
-              value={search}
-              onInput={(e) => setSearch(e.currentTarget.value)}
-              type={'text'}
-              placeholder={'Введите название товара'}
-            />
-            <div className={`${DEFAULT_CLASSNAME}_search-panel_btn`}>
-              <FontAwesomeIcon className={`${DEFAULT_CLASSNAME}_search-icon`} icon={faSearch} />
-            </div>
-          </div>
           <div className={`${DEFAULT_CLASSNAME}_search-panel_filter`}>
-            <span>{'Фильтр'}</span>
             <ul>
-              <li className={selectedFilter === 'all' && 'filter-active'} id={'all'} onClick={() => setSelectedFilter('all')}>{'Все'}</li>
-              <li className={selectedFilter === 'SiliconIphone' && 'filter-active'} id={'SiliconIphone'} onClick={() => setSelectedFilter('SiliconIphone')}>{'Silicon case for iPhone'}</li>
-              <li className={selectedFilter === 'O-like' && 'filter-active'} id={'O-like'} onClick={() => setSelectedFilter('O-like')}>{'O-like'}</li>
-              <li className={selectedFilter === 'CrystalCase' && 'filter-active'} id={'CrystalCase'} onClick={() => setSelectedFilter('CrystalCase')}>{'Crystal case iPhone'}</li>
-              <li className={selectedFilter === 'ClearCase' && 'filter-active'} id={'ClearCase'} onClick={() => setSelectedFilter('ClearCase')}>{'Clear case iPhone'}</li>
+              {example.map(category => {
+                return <ul>
+                  <li className={`${DEFAULT_CLASSNAME}_category`}>{category.category}</li>
+                  <ul>
+                    {category.subcategories.map(subcategory => {
+                      return <li
+                        onClick={() => setActiveSubcategory(subcategory.subcategory)}
+                        className={activeSubcategory === subcategory.subcategory ? `${DEFAULT_CLASSNAME}_subcategory active` : `${DEFAULT_CLASSNAME}_subcategory`}>
+                        {subcategory.subcategory}
+                      </li>
+                    })}
+                  </ul>
+                </ul>
+              })}
             </ul>
           </div>
         </div>
         <div className={`${DEFAULT_CLASSNAME}_content`}>
           {items.length ? items.map((item, id) => {
-            return <CatalogItem logo={item.logo} title={item.title} price={item.price} key={id.toString()} setShowModal={setShowModal} />
+            return <CatalogItem photos={item.photos} title={item.title} price={item.price} key={id.toString()} setShowModal={setShowModal} setActiveItem={setActiveItem}/>
           }): <span className={'catalog-no-results'}>{'Нет товаров соотвутствующих поиску / фильтрам'}</span>}
         </div>
       </div>

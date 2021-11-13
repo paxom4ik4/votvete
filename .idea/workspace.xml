@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="feat: lock">
+    <list default="true" id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="started project v2">
+      <change afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/catalog/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/catalog/catalog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contacts/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts/contacts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/map/custom_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/custom_map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/catalog/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/catalog/catalog.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -80,6 +81,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src" />
       <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\assets\icons" />
       <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\fonts" />
     </key>
@@ -118,7 +120,7 @@
       <workItem from="1635175864561" duration="12000" />
       <workItem from="1635925808855" duration="102000" />
       <workItem from="1635925932448" duration="250000" />
-      <workItem from="1636812468468" duration="2438000" />
+      <workItem from="1636812468468" duration="12840000" />
     </task>
     <task id="LOCAL-00001" summary="init: project started - basic structure">
       <created>1633782550853</created>
@@ -246,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635080589220</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="started project v2">
+      <created>1636815925400</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1636815925400</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +292,7 @@
     <MESSAGE value="feat: adaptive" />
     <MESSAGE value="feat: small improvements" />
     <MESSAGE value="feat: lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: lock" />
+    <MESSAGE value="started project v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="started project v2" />
   </component>
 </project>

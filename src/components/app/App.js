@@ -19,136 +19,235 @@ import Advantages from "../advantages";
 import About from "../about/about";
 import Delivery from "../delivery/delivery";
 import Catalog from "../catalog";
-
-import case_63 from "../../assets/cases/case63.png";
-import case_28 from "../../assets/cases/case28.png";
-import case_9 from "../../assets/cases/case9.png";
 import ScrollToTop from "../../scrollToTop";
 import BuyModal from "../buy_modal";
 import Recommendation from "../recommendation";
 import Sales from "../sales";
 
-//
+// ипорт фото из папки assets
+import silicone1 from "../../assets/cases/silicone1.JPG";
+import silicone2 from "../../assets/cases/silicone2.JPG";
+import silicone3 from "../../assets/cases/silicone3.JPG";
+
+import crystal1 from '../../assets/cases/crystal1.JPG';
+import crystal2 from '../../assets/cases/crystal2.JPG';
+
+import plastic1 from '../../assets/cases/plastic1.JPG';
+import plastic2 from '../../assets/cases/plastic2.JPG';
+import plastic3 from '../../assets/cases/plastic3.JPG';
+
 const example = [
    {
      category: 'Аксессуары для телефонов',
      subcategories: [
        {
-         subcategory: 'чехлы',
+         subcategory: 'чехлы для телефонов',
          items: [{
            title: 'чехол на айфон силиконовый',
-           photos: [case_63, case_28, case_9],
+           price: '25 BYN',
+           photos: [silicone1, silicone2, silicone3],
+         },{
+           title: 'чехол на айфон прозрачный',
+           price: '25 BYN',
+           photos: [crystal1, crystal2],
+         },{
+           title: 'чехол на айфон пластиковый',
+           price: '25 BYN',
+           photos: [plastic1, plastic2, plastic3],
          }],
        },
        {
          subcategory: 'защитные пленки и стекла',
          items: [{
            title: 'защитное стекло на iPhone',
-           photos: [case_63, case_28, case_9],
+           price: '15 BYN',
+           photos: [],
          }],
        },
        {
-         subcategory: 'зарядные устройства',
+         subcategory: 'зарядные устройства для телефонов',
          items: [{
-           title: 'чехол на айфон силиконовый',
-           photos: [case_63, case_28, case_9],
+           title: 'зарядное устройство универсальное',
+           price: '20 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'портативные зарядные устройства',
+         items: [{
+           title: 'портативное зарядное устройство 5000 mah',
+           price: '49 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'кабели для телефонов',
+         items: [{
+           title: 'зарядный кабель',
+           price: '9 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'наушники для телефонов',
+         items: [{
+           title: 'наушники проводные 1м',
+           price: '49 BYN',
+           photos: [],
          }],
        },
      ]
    },
    {
-     category: 'phone',
+     category: 'Аксессуары для планшетов',
      subcategories: [
        {
-         subcategory: 'чехлы на айфон',
+         subcategory: 'чехлы для планшетов',
          items: [{
-           title: 'чехол на айфон силиконовый',
-           photos: [case_63, case_28, case_9],
+           title: 'чехол на iPad силиконовый',
+           price: '35 BYN',
+           photos: [],
          }],
        },
        {
-         subcategory: 'чехлы на самсунг',
-         items: [{}],
+         subcategory: 'защитные стекла для планшетов',
+         items: [{
+           title: 'защитное стекло на iPad',
+           price: '20 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'зарядные устройства для планшетов',
+         items: [{
+           title: 'зарядное устройство для iPad',
+           price: '30 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'кабели для планшетов',
+         items: [{
+           title: 'универсальный кабель зарядки для планшетов',
+           price: '19 BYN',
+           photos: [],
+         }],
        },
      ]
    },
-
+   {
+     category: 'Аксессуары для авто',
+     subcategories: [
+       {
+         subcategory: 'автомобильные зарядные',
+         items: [{
+           title: 'автомобильное ЗУ',
+           price: '19 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'держатели',
+         items: [{
+           title: 'автомобильный держатель для телефона',
+           price: '30 BYN',
+           photos: [],
+         }],
+       },
+     ]
+   },
+   {
+     category: 'Аксессуары для ноутбуков',
+     subcategories: [
+       {
+         subcategory: 'аксессуары для ноутбуков',
+         items: [{
+           title: 'чехол для ноутбука универсальный',
+           price: '49 BYN',
+           photos: [],
+         }],
+       },
+     ]
+   },
+   {
+     category: 'Прочие аксессуары',
+     subcategories: [
+       {
+         subcategory: 'чехлы для airpods',
+         items: [{
+           title: 'чехлы для airpods',
+           price: '19 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'переходники',
+         items: [{
+           title: 'переходник',
+           price: '10 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'фитнес браслеты',
+         items: [{
+           title: 'фитнес браслет',
+           price: '79 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'ремешки для умных часов',
+         items: [{
+           title: 'ремешок для apple watch',
+           price: '39 BYN',
+           photos: [],
+         },{
+           title: 'ремешок для samsung watch',
+           price: '34 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'ремешки для фитнес браслетов',
+         items: [{
+           title: 'ремешок для xiaomi mi band',
+           price: '19 BYN',
+           photos: [],
+         }],
+       },
+       {
+         subcategory: 'портативнве колонки',
+         items: [{
+           title: 'JBL flip 5',
+           price: '329 BYN',
+           photos: [],
+         }],
+       },
+     ]
+   },
  ]
-//
-
-
-const items = [
-  {
-    id: 63,
-    logo: case_63,
-    title: 'Silicone Case',
-    price: '25,00',
-    type: 'SiliconIphone',
-  },
-  {
-    id: 28,
-    logo: case_28,
-    title: 'O-like case for 12/12 Pro',
-    price: '25,00',
-    type: 'O-like',
-  },
-  {
-    id: 9,
-    logo: case_9,
-    title: 'Crystal Case',
-    price: '25,00',
-    type: 'CrystalCase',
-  },
-  {
-    id: 64,
-    logo: case_63,
-    title: 'Clear Case',
-    price: '25,00',
-    type: 'ClearCase'
-  },
-  {
-    id: 29,
-    logo: case_28,
-    title: 'ClearCase case for 12/12 Pro',
-    price: '25,00',
-    type: 'ClearCase'
-  },
-  {
-    id: 10,
-    logo: case_9,
-    title: 'O like case',
-    price: '25,00',
-    type: 'O-like',
-  },
-  {
-    id: 42,
-    logo: case_63,
-    title: 'Silicone case for 12/12 Pro',
-    price: '25,00',
-    type: 'SiliconIphone',
-  },
-  {
-    id: 43,
-    logo: case_28,
-    title: 'SiliconIphone',
-    price: '25,00',
-    type: 'SiliconIphone',
-  },
-  {
-    id: 44,
-    logo: case_9,
-    title: 'CrystalCase',
-    price: '25,00',
-    type: 'CrystalCase',
-  },
-]
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
 
   const [search, setSearch] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
-  const [itemsToShow, setItemsToShow] = useState(items);
+
+  const [activeItem, setActiveItem] = useState({
+    title: '',
+    price: '',
+  })
+
+  const [activeSubcategory, setActiveSubcategory] = useState('чехлы для телефонов')
+
+  const [activeItems, setActiveItems] = useState(example[0].subcategories[0].items);
+
+  useEffect(() => {
+    const items = example.map(category => category.subcategories.filter(subcategories => subcategories.subcategory === activeSubcategory))
+    const filteredItems = items.filter(item => item.length);
+    setActiveItems(filteredItems[0][0].items);
+  }, [activeSubcategory])
 
   const [pathname, setPathname] = useState("");
 
@@ -157,39 +256,6 @@ const App = () => {
       setPathname(window.location.pathname);
     })
   }
-
-  useEffect(() => {
-    if(search.trim() === '' && selectedFilter === 'all') {
-      setItemsToShow(items);
-      return;
-    }
-
-    if (search.trim() !== '' && selectedFilter === 'all') {
-      const searchItems = items.filter((item) => {
-        return item.title.toLowerCase().includes(search.trim().toLowerCase());
-      });
-      setItemsToShow(searchItems);
-      return;
-    }
-
-    if (selectedFilter !== 'all' && search.trim() === '') {
-      const filteredItems = items.filter((item) => {
-        return item.type === selectedFilter;
-      });
-      setItemsToShow(filteredItems);
-      return;
-    }
-
-    const filteredItems = items.filter((item) => {
-      return item.type === selectedFilter;
-    });
-
-    const searchItems = filteredItems.filter((item) => {
-      return item.title.toLowerCase().includes(search.trim().toLowerCase());
-    });
-
-    setItemsToShow(searchItems);
-  }, [search, selectedFilter])
 
   return (
     <Router>
@@ -209,16 +275,20 @@ const App = () => {
           </Route>
           <Route exact path={'/catalog'}>
             <Catalog
-              items={itemsToShow}
+              items={activeItems}
               search={search}
               setSearch={setSearch}
               selectedFilter={selectedFilter}
               setSelectedFilter={setSelectedFilter}
               setShowModal={setShowModal}
+              example={example}
+              activeSubcategory={activeSubcategory}
+              setActiveSubcategory={setActiveSubcategory}
+              setActiveItem={setActiveItem}
             />
           </Route>
         </Switch>
-        {showModal && <BuyModal setShowModal={setShowModal} />}
+        {showModal && <BuyModal setShowModal={setShowModal} activeItem={activeItem} activeSubcategory={activeSubcategory} />}
         <Contacts />
         <div className={'telegram-link'}>
           <FontAwesomeIcon icon={faTelegram} />
