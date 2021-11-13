@@ -124,6 +124,12 @@
   color: #ffffff;
 }
 
+@media (max-width: 768px) {
+  .catalog_content {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 425px) {
   .catalog_wrapper {
     justify-content: center;
