@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="feat: lock">
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/catalog/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/catalog/catalog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contacts/contacts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contacts/contacts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/map/custom_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/custom_map.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="develop" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/app/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/app/App.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1zGjFcHJeELsd5NBTkHllQVsyhd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\assets\icons" />
+      <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\assets\slides" />
+      <recent name="C:\Users\pavel.zelenko\Desktop\votvete\src\fonts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="" />
+      <created>1633781219193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633781219193</updated>
+      <workItem from="1633781222978" duration="3520000" />
+      <workItem from="1633784790911" duration="15080000" />
+      <workItem from="1633809277886" duration="18475000" />
+      <workItem from="1633880723481" duration="275000" />
+      <workItem from="1633940080601" duration="370000" />
+      <workItem from="1633957643840" duration="95000" />
+      <workItem from="1633959619896" duration="2399000" />
+      <workItem from="1633964279851" duration="3037000" />
+      <workItem from="1633977674956" duration="3602000" />
+      <workItem from="1634378768788" duration="268000" />
+      <workItem from="1634547306370" duration="1125000" />
+      <workItem from="1634669099387" duration="2659000" />
+      <workItem from="1634732095183" duration="7739000" />
+      <workItem from="1634824120633" duration="10049000" />
+      <workItem from="1634853500080" duration="2354000" />
+      <workItem from="1634855902285" duration="2027000" />
+      <workItem from="1634993524218" duration="951000" />
+      <workItem from="1635080382286" duration="1368000" />
+      <workItem from="1635175776036" duration="51000" />
+      <workItem from="1635175864561" duration="12000" />
+      <workItem from="1635925808855" duration="102000" />
+      <workItem from="1635925932448" duration="250000" />
+      <workItem from="1636812468468" duration="2438000" />
+    </task>
+    <task id="LOCAL-00001" summary="init: project started - basic structure">
+      <created>1633782550853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633782550853</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: base header implementation">
+      <created>1633785827393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633785827393</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add carousel with slides">
+      <created>1633790392036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633790392036</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add top items section">
+      <created>1633794095937</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1633794095937</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add contact info and routing">
+      <created>1633800796399</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633800796399</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: hot changes">
+      <created>1633811546775</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633811546775</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: change font">
+      <created>1633811747443</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1633811747443</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactoring: v1">
+      <created>1633862587412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1633862587412</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: advantages and some new features">
+      <created>1633871463948</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1633871463948</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: add basic catalog layout">
+      <created>1633874501576</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1633874501576</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: transition?">
+      <created>1633875500949</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1633875500949</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: searching / filtering - basic implementation">
+      <created>1633961399120</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1633961399120</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: searching / filtering improvements">
+      <created>1633964572642</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1633964572642</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: buy modal">
+      <created>1633981162585</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1633981162585</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: almost done">
+      <created>1634827115678</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1634827115679</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: adaptive">
+      <created>1634834375682</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1634834375682</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: small improvements">
+      <created>1634857937040</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1634857937040</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: lock">
+      <created>1635080589220</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1635080589220</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init: project started - basic structure" />
+    <MESSAGE value="feat: base header implementation" />
+    <MESSAGE value="feat: add carousel with slides" />
+    <MESSAGE value="feat: add top items section" />
+    <MESSAGE value="feat: add contact info and routing" />
+    <MESSAGE value="feat: hot changes" />
+    <MESSAGE value="feat: change font" />
+    <MESSAGE value="refactoring: v1" />
+    <MESSAGE value="feat: advantages and some new features" />
+    <MESSAGE value="feat: add basic catalog layout" />
+    <MESSAGE value="feat: transition?" />
+    <MESSAGE value="feat: searching / filtering - basic implementation" />
+    <MESSAGE value="feat: searching / filtering improvements" />
+    <MESSAGE value="feat: buy modal" />
+    <MESSAGE value="feat: almost done" />
+    <MESSAGE value="feat: adaptive" />
+    <MESSAGE value="feat: small improvements" />
+    <MESSAGE value="feat: lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: lock" />
+  </component>
+</project>

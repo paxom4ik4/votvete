@@ -28,6 +28,55 @@ import BuyModal from "../buy_modal";
 import Recommendation from "../recommendation";
 import Sales from "../sales";
 
+//
+const example = [
+   {
+     category: 'Аксессуары для телефонов',
+     subcategories: [
+       {
+         subcategory: 'чехлы',
+         items: [{
+           title: 'чехол на айфон силиконовый',
+           photos: [case_63, case_28, case_9],
+         }],
+       },
+       {
+         subcategory: 'защитные пленки и стекла',
+         items: [{
+           title: 'защитное стекло на iPhone',
+           photos: [case_63, case_28, case_9],
+         }],
+       },
+       {
+         subcategory: 'зарядные устройства',
+         items: [{
+           title: 'чехол на айфон силиконовый',
+           photos: [case_63, case_28, case_9],
+         }],
+       },
+     ]
+   },
+   {
+     category: 'phone',
+     subcategories: [
+       {
+         subcategory: 'чехлы на айфон',
+         items: [{
+           title: 'чехол на айфон силиконовый',
+           photos: [case_63, case_28, case_9],
+         }],
+       },
+       {
+         subcategory: 'чехлы на самсунг',
+         items: [{}],
+       },
+     ]
+   },
+
+ ]
+//
+
+
 const items = [
   {
     id: 63,

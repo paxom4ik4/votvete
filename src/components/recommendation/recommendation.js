@@ -12,7 +12,7 @@ const Recommendation = () => {
     <div className={DEFAULT_CLASSNAME}>
       <span id={DEFAULT_CLASSNAME} />
       <div className={`${DEFAULT_CLASSNAME}_wrapper`}>
-        <span className={`${DEFAULT_CLASSNAME}_title`}>{"Мы рекоммендуем к покупке"}</span>
+        <span className={`${DEFAULT_CLASSNAME}_title`}>{"Мы рекомендуем к покупке"}</span>
         <div className={`${DEFAULT_CLASSNAME}_items`}>
           <div className={`${DEFAULT_CLASSNAME}_item`}>
             <div className={`${DEFAULT_CLASSNAME}_item-content`}>
