@@ -9,6 +9,7 @@ import './buy_modal.css';
 const DEFAULT_CLASSNAME = 'buy-modal';
 
 const iphones = ['iphone 7/8', 'iphone 7+/8+', 'iphone X', 'iphone XR', 'iphone 11', 'iphone 11 Pro', 'iphone 11 Pro Max', 'iphone 12', 'iphone 12 Pro', 'iphone 12 Pro Max',]
+const samsungs = ['Galaxy s6', 'Galaxy s7', 'Galaxy s8', 'Galaxy s9', 'Galaxy s10', 'Galaxy s20',]
 
 const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
   const [device, setDevice] = useState('');
@@ -17,6 +18,8 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
   const [error, setError] = useState();
+
+  const itemsToShowDecive = ['айфон', 'самсунг'];
 
   const onSubmitData = () => {
     console.log(config)
@@ -67,7 +70,10 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
         return setShowModal(false);
       });
   }
-  
+
+  console.log(activeItem.title);
+  console.log(activeItem.title.includes('айфон') || activeItem.title.includes('самсунг'));
+
   return (
     <div className={DEFAULT_CLASSNAME}>
       <div className={`${DEFAULT_CLASSNAME}_content`}>
@@ -75,7 +81,7 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
         <div className={`${DEFAULT_CLASSNAME}_content-title`}>{'Заказ Товара'}</div>
 
         {error && <div className={`${DEFAULT_CLASSNAME}_error-handler`}>{error}</div>}
-        
+
         <div className={`${DEFAULT_CLASSNAME}_content-form`}>
           <label htmlFor={'userName'}>{'Как вас зовут?'}</label>
           <input
@@ -94,14 +100,18 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
             onChange={e => setPhone(e.target.value)}
           />
         </div>
-        {activeItem.title.includes('айфон') &&
-          <div>
-            <div>{'Выберите ваш девайс'}</div>
-            <select className={'choose-phone'} value={device} onChange={(e) => setDevice(e.currentTarget.value)} placeholder={'Выберите ваш телефон'}>
-              {iphones.map(item => <option>{item}</option>)}
-            </select>
-          </div>
-        }
+            {activeItem.title.includes('айфон') && <div>
+              <div>{'Выберите ваш девайс'}</div>
+              <select className={'choose-phone'} value={device} onChange={(e) => setDevice(e.currentTarget.value)} placeholder={'Выберите ваш телефон'}>
+                {iphones.map(item => <option>{item}</option>)}
+              </select>
+            </div>}
+            {activeItem.title.includes('самсунг') && <div>
+              <div>{'Выберите ваш девайс'}</div>
+              <select className={'choose-phone'} value={device} onChange={(e) => setDevice(e.currentTarget.value)} placeholder={'Выберите ваш телефон'}>
+                {samsungs.map(item => <option>{item}</option>)}
+              </select>
+            </div>}
         <div className={`${DEFAULT_CLASSNAME}_content-description`}>
           <div className={`${DEFAULT_CLASSNAME}_content-description_text`}>
             <div>Товар: {activeItem.title}</div>

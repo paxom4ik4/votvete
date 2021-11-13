@@ -51,7 +51,7 @@ const example = [
            price: '25 BYN',
            photos: [crystal1, crystal2],
          },{
-           title: 'чехол на айфон пластиковый',
+           title: 'чехол на самсунг пластиковый',
            price: '25 BYN',
            photos: [plastic1, plastic2, plastic3],
          }],
