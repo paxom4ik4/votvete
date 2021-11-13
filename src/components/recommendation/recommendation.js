@@ -2,8 +2,8 @@ import React from 'react';
 
 import './recommendation.css';
 
-import case_28 from "../../assets/cases/case28.png";
-import case_63 from "../../assets/cases/case63.png";
+import silicone1 from "../../assets/cases/silicone1.JPG";
+import silicone2 from "../../assets/cases/silicone2.JPG";
 
 const DEFAULT_CLASSNAME = 'recommendation';
 
@@ -16,7 +16,7 @@ const Recommendation = () => {
         <div className={`${DEFAULT_CLASSNAME}_items`}>
           <div className={`${DEFAULT_CLASSNAME}_item`}>
             <div className={`${DEFAULT_CLASSNAME}_item-content`}>
-              <img className={`${DEFAULT_CLASSNAME}_item-img`} src={case_28} alt={'O-like Case'} />
+              <img className={`${DEFAULT_CLASSNAME}_item-img`} src={silicone1} alt={'O-like Case'} />
               <div className={`${DEFAULT_CLASSNAME}_item-description`}>
                 <span className={`${DEFAULT_CLASSNAME}_item-title`}>{'Противоударные чехлы O-Like'}</span>
                 <ul>
@@ -31,7 +31,7 @@ const Recommendation = () => {
           </div>
           <div className={`${DEFAULT_CLASSNAME}_item`}>
             <div className={`${DEFAULT_CLASSNAME}_item-content`}>
-              <img className={`${DEFAULT_CLASSNAME}_item-img`} src={case_63} alt={'Silicon Case'}/>
+              <img className={`${DEFAULT_CLASSNAME}_item-img`} src={silicone2} alt={'Silicon Case'}/>
               <div className={`${DEFAULT_CLASSNAME}_item-description`}>
                 <span className={`${DEFAULT_CLASSNAME}_item-title`}>{'Silicone Case'}</span>
                 <ul>

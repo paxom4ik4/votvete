@@ -4,27 +4,29 @@ import './top-goods.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import cases images
-import case_63 from '../../assets/cases/case63.png';
-import case_28 from '../../assets/cases/case28.png';
-import case_9 from '../../assets/cases/case9.png';
+import silicone1 from '../../assets/cases/silicone1.JPG';
+import silicone2 from '../../assets/cases/silicone2.JPG';
+import silicone3 from '../../assets/cases/silicone3.JPG';
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+
+import { NavLink } from "react-router-dom";
 
 const DEFAULT_CLASSNAME = 'top-goods';
 const TITLE = 'Популярные товары';
 
 const mockedGoods = [
   {
-    logo: case_63,
+    logo: silicone1,
     title: 'Silicone case for 12/12 Pro',
     price: '25,00'
   },
   {
-    logo: case_28,
+    logo: silicone2,
     title: 'Silicone case for 12/12 Pro',
     price: '25,00'
   },
   {
-    logo: case_9,
+    logo: silicone3,
     title: 'Silicone case for 12/12 Pro',
     price: '25,00'
   },
@@ -37,9 +39,9 @@ const TopGoodItem = ({logo, title, price}) => (
     <img src={logo} alt={'case image'} />
     <span className={`${DEFAULT_CLASSNAME}_item-title`}>{title}</span>
     <span className={`${DEFAULT_CLASSNAME}_item-price`}>{`${price} BYN`}</span>
-    <div className={`${DEFAULT_CLASSNAME}_item-order-btn`}>
-      {shoppingCart} <span>{'Заказать'}</span>
-    </div>
+    <NavLink className={`${DEFAULT_CLASSNAME}_item-order-btn`} exact to={'/catalog'}>
+      {shoppingCart} <span>{'Перейти в каталог'}</span>
+    </NavLink>
   </div>
 )
 

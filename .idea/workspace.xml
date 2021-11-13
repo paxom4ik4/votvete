@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="started project v2">
-      <change afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+    <list default="true" id="aa185737-9437-438a-95fd-3dd182e88577" name="Default Changelist" comment="project ready v1">
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/crystal1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/crystal2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/plastic1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/plastic2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/plastic3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/silicone1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/silicone2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/cases/silicone3.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/buy_modal/buy_modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/catalog/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/catalog/catalog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/catalog/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/catalog/catalog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/cases/case28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/cases/case63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/cases/case9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/recommendation/recommendation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/recommendation/recommendation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/top-goods/top-goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/top-goods/top-goods.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +127,7 @@
       <workItem from="1635175864561" duration="12000" />
       <workItem from="1635925808855" duration="102000" />
       <workItem from="1635925932448" duration="250000" />
-      <workItem from="1636812468468" duration="12840000" />
+      <workItem from="1636812468468" duration="13201000" />
     </task>
     <task id="LOCAL-00001" summary="init: project started - basic structure">
       <created>1633782550853</created>
@@ -255,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636815925400</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="project ready v1">
+      <created>1636827932316</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636827932316</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +307,7 @@
     <MESSAGE value="feat: small improvements" />
     <MESSAGE value="feat: lock" />
     <MESSAGE value="started project v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="started project v2" />
+    <MESSAGE value="project ready v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="project ready v1" />
   </component>
 </project>
