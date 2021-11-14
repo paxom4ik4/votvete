@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +23,7 @@ import ScrollToTop from "../../scrollToTop";
 import BuyModal from "../buy_modal";
 import Recommendation from "../recommendation";
 import Sales from "../sales";
+import InfoPopup from "../info-popup";
 
 // ипорт фото из папки assets
 import silicone1 from "../../assets/cases/silicone1.JPG";
@@ -230,6 +231,8 @@ const example = [
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupTitle, setPopupTitle] = useState("");
 
   const [search, setSearch] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -242,6 +245,7 @@ const App = () => {
   const [activeSubcategory, setActiveSubcategory] = useState('чехлы для телефонов')
 
   const [activeItems, setActiveItems] = useState(example[0].subcategories[0].items);
+  const popupRef = useRef();
 
   useEffect(() => {
     const items = example.map(category => category.subcategories.filter(subcategories => subcategories.subcategory === activeSubcategory))
@@ -257,10 +261,23 @@ const App = () => {
     })
   }
 
+  const handleSetModal = () => {
+    setShowModal(showModal => !showModal);
+  }
+
+  const handleShowPopup = (title) => {
+    setPopupTitle(title);
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000)
+  }
+
   return (
     <Router>
       <div className={'main'}>
         <Header pathname={pathname} setPathname={onSetPathname} />
+        { showPopup && <InfoPopup>{popupTitle}</InfoPopup> }
         <ScrollToTop />
         <Switch>
           <Route exact path={'/'}>
@@ -280,7 +297,7 @@ const App = () => {
               setSearch={setSearch}
               selectedFilter={selectedFilter}
               setSelectedFilter={setSelectedFilter}
-              setShowModal={setShowModal}
+              setShowModal={handleSetModal}
               example={example}
               activeSubcategory={activeSubcategory}
               setActiveSubcategory={setActiveSubcategory}
@@ -288,7 +305,7 @@ const App = () => {
             />
           </Route>
         </Switch>
-        {showModal && <BuyModal setShowModal={setShowModal} activeItem={activeItem} activeSubcategory={activeSubcategory} />}
+        {showModal && <BuyModal handleShowPopup={handleShowPopup} setShowModal={setShowModal} activeItem={activeItem} activeSubcategory={activeSubcategory} />}
         <Contacts />
         <div className={'telegram-link'}>
           <FontAwesomeIcon icon={faTelegram} />

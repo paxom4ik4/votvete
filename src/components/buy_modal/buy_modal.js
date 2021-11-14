@@ -11,7 +11,7 @@ const DEFAULT_CLASSNAME = 'buy-modal';
 const iphones = ['iphone 7/8', 'iphone 7+/8+', 'iphone X', 'iphone XR', 'iphone 11', 'iphone 11 Pro', 'iphone 11 Pro Max', 'iphone 12', 'iphone 12 Pro', 'iphone 12 Pro Max',]
 const samsungs = ['Galaxy s6', 'Galaxy s7', 'Galaxy s8', 'Galaxy s9', 'Galaxy s10', 'Galaxy s20',]
 
-const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
+const BuyModal = ({handleShowPopup, setShowModal, activeItem, activeSubcategory}) => {
   const [device, setDevice] = useState('');
 
   const [username, setUsername] = useState("");
@@ -66,7 +66,9 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
 
     fetch(`https://api.telegram.org/bot${config.bot.token}/sendMessage?chat_id=${config.bot.chat}&parse_mode=html&text=${encodeURI(msg)}`, requestOptions)
       .then(response => response.json())
-      .then(response => {
+      .then((err, response) => {
+        console.log(err);
+        handleShowPopup("Заказ успешно оформлен");
         return setShowModal(false);
       });
   }
@@ -118,7 +120,7 @@ const BuyModal = ({setShowModal, activeItem, activeSubcategory}) => {
             <div>К оплате: {activeItem.price}</div>
           </div>
         </div>
-        <div onClick={() => onSubmitData()} className={`${DEFAULT_CLASSNAME}_content-confirm-btn`}>{'Подтвердить'}</div>
+        <div onClick={() => onSubmitData() } className={`${DEFAULT_CLASSNAME}_content-confirm-btn`}>{'Подтвердить'}</div>
       </div>
     </div>
   )
