@@ -66,11 +66,14 @@ const BuyModal = ({handleShowPopup, setShowModal, activeItem, activeSubcategory}
 
     fetch(`https://api.telegram.org/bot${config.bot.token}/sendMessage?chat_id=${config.bot.chat}&parse_mode=html&text=${encodeURI(msg)}`, requestOptions)
       .then(response => response.json())
-      .then((err, response) => {
-        console.log(err);
+      .then((response) => {
         handleShowPopup("Заказ успешно оформлен");
         return setShowModal(false);
-      });
+      })
+      .catch((err) => {
+        console.log(err)
+        return setError("Ошибка загрузки данных")
+      })
   }
 
   console.log(activeItem.title);
